@@ -1,0 +1,15 @@
+/* spiner in this css */
+.spiner{
+     background-color: orangered;
+     height: 200px;
+     width: 200px;
+     border-radius: 50%;
+     border: 25px solid #fff;
+     border-top: 20px solid rgb(243, 20, 131);
+     animation: animation 1.5s linear infinite;
+}
+@keyframes animation{
+     to{
+          transform: rotate(360deg);
+     }
+}
