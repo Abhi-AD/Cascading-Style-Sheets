@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Backgorund Animation</title>
+
+     <style>
+          * {
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+               font-family: 'Courier New', Courier, monospace;
+          }
+
+          body {
+               position: relative;
+               overflow: hidden;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               min-height: 100vh;
+               background: #3A7EB0;
+          }
+
+          .container {
+               position: absolute;
+               width: 100%;
+               height: 100%;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+          }
+
+          h2 {
+               color: #fff;
+               text-align: center;
+               font-size: 8vw;
+               line-height: 0.6em;
+               z-index: 1000;
+               font-weight: 900;
+          }
+
+          h2 span {
+               font-size: 0.4em;
+               letter-spacing: 0.4em;
+               font-weight: 400;
+               text-transform: uppercase;
+          }
+
+          .block {
+               position: absolute;
+               width: 50px;
+               height: 100px;
+               background: #489dde;
+               box-shadow: 10px 10px 50px rgba(45, 71, 104, 0.2);
+
+          }
+     </style>
+
+</head>
+
+<body>
+     <div class="container">
+          <h2><span>Css Video</span><br />Animation</h2>
+     </div>
+     <script src="./../Anime-min/anime.min.js"></script>
+     <script>
+          const container = document.querySelector('.container');
+          for (let i = 0; i <= 100; i++) {
+               const blocks = document.createElement('div');
+               blocks.classList.add('block');
+               container.appendChild(blocks);
+          }
+          function animateBlocks(){
+               anime({
+                    targets:'.block',
+                    translateX:function(){
+                         return anime.random(-700,700)
+                    },
+                    translateY:function(){
+                         return anime.random(-500,500)
+                    },
+                    scale:function(){
+                         return anime.random(1,5)
+                    },
+                    easing:'linear',
+                    duration:3000,
+                    delay:anime.stagger(10),
+                    complete:animateBlocks,
+               })
+          }
+          animateBlocks()
+     </script>
+</body>
+
+</html>
