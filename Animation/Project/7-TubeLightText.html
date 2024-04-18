@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Tube Light Text Animation</title>
+     <style>
+          * {
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+               font-family: Arial, Helvetica, sans-serif;
+          }
+
+          body {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               min-height: 100vh;
+               background: #074B4D;
+          }
+
+          h2 {
+               position: relative;
+               font-size: 6rem;
+               letter-spacing: 15px;
+               color: #00B0B6;
+               text-transform: uppercase;
+               -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+               line-height: 0.70em;
+               outline: none;
+               animation: animation 1s linear infinite;
+          }
+
+          @keyframes animation {
+               0%,
+               18%,
+               20%,
+               50.1%,
+               60%,
+               65.1%,
+               80%,
+               90.1%,
+               92% {
+                    color: #00B0B6;
+                    text-shadow: none;
+               }
+
+               18.1%,
+               20%,
+               30%,
+               50%,
+               60.1%,
+               65%,
+               80.1%,
+               90%,
+               92.1%,
+               100% {
+                    color: #fff;
+                    text-shadow: 0 0 10px #00B0B6,
+                         0 0 20px #00B0B6,
+                         0 0 40px #00B0B6,
+                         0 0 80px #00B0B6,
+                         0 0 1600px #00B0B6;
+               }
+          }
+
+          /* Responsive adjustments */
+          @media screen and (max-width: 1920px) {
+               h2 {
+                    font-size: 4rem;
+                    letter-spacing: 15px;
+               }
+          }
+          @media screen and (max-width: 768px) {
+               h2 {
+                    font-size: 2rem;
+                    letter-spacing: 10px;
+               }
+          }
+
+          @media screen and (max-width: 480px) {
+               h2 {
+                    font-size: 1rem;
+                    letter-spacing: 2px;
+               }
+          }
+     </style>
+</head>
+
+<body>
+     <h2 contenteditable="true">I love you baby</h2>
+</body>
+
+</html>
