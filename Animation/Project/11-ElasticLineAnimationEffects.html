@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Elastic Line Animation Effects</title>
+
+     <style>
+          * {
+               padding: 0;
+               margin: 0;
+          }
+
+          body {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               min-height: 100vh;
+               background: #000;
+          }
+
+          h1 {
+               color: #00ff3c;
+               animation: Elastic 1s ease-in-out infinite;
+               margin-bottom: 10%;
+          }
+
+          svg {
+               position: absolute;
+               width: 400px;
+               fill: none;
+          }
+
+          svg:nth-child(2) {
+               filter: blur(40px);
+          }
+
+          svg path {
+               stroke: #ff0092;
+               stroke-width: 50;
+               stroke-linecap: round;
+               transform: translate(50px, 50%);
+               animation: Elastic 2s ease-in-out infinite;
+          }
+
+          @keyframes Elastic {
+               0% {
+                    stroke: #ff0092;
+                    d: path("M0,25 C150,110 150,-60 300,25");
+                    color: #ff0092;
+
+               }
+
+               50% {
+                    stroke: #00ff3c;
+                    d: path("M0,25 C160,-50 140, 110 300,25");
+                    color: #00ff3c;
+
+               }
+          }
+     </style>
+</head>
+
+<body>
+     <h1>Elastic Line Animation Effects</h1>
+     <svg>
+          <path d="M0,25 C150,110 150,-60 300,25"></path>
+     </svg>
+     <svg>
+          <path d="M0,25 C150,110 150,-60 300,25"></path>
+     </svg>
+
+</body>
+
+</html>
