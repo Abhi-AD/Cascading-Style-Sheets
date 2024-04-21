@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Animated Gradient Shadow</title>
+     <style>
+          body {
+               margin: 0;
+               padding: 0;
+               background: #087941;
+          }
+
+          .shadow {
+               position: relative;
+               margin: 200px auto 0;
+               width: 400px;
+               height: 250px;
+               background: linear-gradient(0deg, #47FEEA, #47fee950);
+          }
+
+          .shadow:before,
+          .shadow:after {
+               content: '';
+               position: absolute;
+               top: -2px;
+               left: -2px;
+               background: linear-gradient(45deg, #fb0094, #0000ff, #ffff00, #ff0000, #fb0094, #0000ff, #ffff00, #ff0000);
+               width: calc(100% + 4px);
+               height: calc(100% + 4px);
+               background-size: 400%;
+               z-index: -1;
+               animation: shadow 20s linear infinite;
+          }
+
+          .shadow:after {
+               filter: blur(20px);
+          }
+
+          @keyframes shadow {
+               0% {
+                    background-position: 0 0;
+               }
+
+               50% {
+                    background-position: 300% 0;
+               }
+
+               100% {
+                    background-position: 0 0;
+
+               }
+          }
+     </style>
+</head>
+
+<body>
+     <div class="shadow"></div>
+</body>
+
+</html>
