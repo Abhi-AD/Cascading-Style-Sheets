@@ -25,4 +25,4 @@ You will need a web browser to view the HTML and CSS files. No other tools are r
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/your-username/css-project.git
+   https://github.com/Abhi-AD/Cascading-Style-Sheets
