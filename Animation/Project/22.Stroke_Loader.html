@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Stroke Loader</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+     <style>
+          body{
+               margin: 0;
+               padding: 0;
+               background: #262626;
+          }
+          .stroke{
+               width: 400px;
+               height: 2px;
+               background: #ffffff;
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%,-50%);
+          }
+          .stroke:after{
+               content: '\f040';
+               font-family: fontAwesome;
+               position: absolute;
+               top: -70px;
+               left: 0;
+               width: 100%;
+               height: 100%;
+               background: #262626;
+               color: #1ccfcf;
+               font-size: 70px;
+               animation: animation 5s linear infinite;
+               animation-timing-function: cubic-bezier(.61,.01,.44,.92);
+          }
+          .stroke:before{
+               content: '';
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 100%;
+               background: #262626;
+               animation: animation 5s linear infinite;
+               animation-timing-function: cubic-bezier(.61,.01,.44,.92);
+          }
+          @keyframes animation {
+               0%{left: 0;}
+               50%{left: 100%;}
+               100%{left: 0;}
+          }
+     </style>
+</head>
+<body>
+     <div class="stroke"></div>
+</body>
+</html>
