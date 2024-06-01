@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tubelight Text Animation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #262626;
+        }
+        .button, .button1 {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+        .button { top: 35%; }
+        .button1 { top: 45%; }
+        .button2 { top: 55%; }
+        li {
+            text-transform: capitalize;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 4em;
+            letter-spacing: 12px;
+            color: #484848;
+            text-shadow: none;
+            animation: animation 1s infinite linear;
+        }
+        @keyframes animation {
+            0%, 18%, 30%, 70%, 90% { color: #a7a300; text-shadow: none; }
+            20%, 35%, 85%, 100% { color: #fff900; text-shadow: 0 0 7px #fff000, 0 0 20px #ff6c00; }
+        }
+        .button li:nth-child(1) { animation-delay: 0.2s; }
+        .button li:nth-child(2) { animation-delay: 0.4s; }
+        .button li:nth-child(3) { animation-delay: 0.6s; }
+        .button li:nth-child(4) { animation-delay: 0.8s; }
+        .button li:nth-child(5) { animation-delay: 1s; }
+        .button li:nth-child(6) { animation-delay: 1.2s; }
+        .button li:nth-child(7) { animation-delay: 1.4s; }
+        .button li:nth-child(8) { animation-delay: 1.6s; }
+        .button li:nth-child(9) { animation-delay: 1.8s; }
+        .button li:nth-child(10) { animation-delay: 2s; }
+        .button li:nth-child(11) { animation-delay: 2.2s; }
+        .button li:nth-child(12) { animation-delay: 2.4s; }
+        .button li:nth-child(13) { animation-delay: 2.6s; }
+        .button li:nth-child(14) { animation-delay: 2.8s; }
+        .button li:nth-child(15) { animation-delay: 3s; }
+        .button li:nth-child(16) { animation-delay: 3.2s; }
+        .button1 li:nth-child(1) { animation-delay: 0.3s; }
+        .button1 li:nth-child(2) { animation-delay: 0.6s; }
+        .button1 li:nth-child(3) { animation-delay: 0.9s; }
+        .button1 li:nth-child(4) { animation-delay: 1.2s; }
+        .button1 li:nth-child(5) { animation-delay: 1.5s; }
+        .button1 li:nth-child(6) { animation-delay: 1.8s; }
+        .button1 li:nth-child(7) { animation-delay: 2.1s; }
+        .button1 li:nth-child(8) { animation-delay: 2.4s; }
+        .button1 li:nth-child(9) { animation-delay: 2.7s; }
+        .button1 li:nth-child(10) { animation-delay: 3s; }
+        .button1 li:nth-child(11) { animation-delay: 3.3s; }
+        .button2 li:nth-child(1) { animation-delay: 0.3s; }
+        .button2 li:nth-child(2) { animation-delay: 0.6s; }
+        .button2 li:nth-child(3) { animation-delay: 0.9s; }
+        .button2 li:nth-child(4) { animation-delay: 1.2s; }
+        .button2 li:nth-child(5) { animation-delay: 1.5s; }
+        .button2 li:nth-child(6) { animation-delay: 1.8s; }
+        .button2 li:nth-child(7) { animation-delay: 2.1s; }
+        .button2 li:nth-child(8) { animation-delay: 2.4s; }
+        .button2 li:nth-child(9) { animation-delay: 2.7s; }
+        .button2 li:nth-child(10) { animation-delay: 3s; }
+    </style>
+</head>
+<body>
+    <ul class="button">
+        <li>🎀</li>
+        <li>h</li>
+        <li>a</li>
+        <li>p</li>
+        <li>p</li>
+        <li>y</li>
+        <li>🎶</li>
+        <li>b</li>
+        <li>i</li>
+        <li>r</li>
+        <li>t</li>
+        <li>h</li>
+        <li>d</li>
+        <li>a</li>
+        <li>y</li>
+        <li>🎀</li>
+    </ul>
+    <ul class="button button1">
+          <li>🎉</li>
+          <li>b</li>
+          <li>a</li>
+          <li>b</li>
+          <li>y</li>
+          <li>🎶</li>
+          <li>m</li>
+          <li>i</li>
+          <li>a</li>
+          <li>s</li>
+          <li>🎉</li>
+     </ul>
+     <ul class="button button2">
+          <li>l</li>
+          <li>o</li>
+          <li>v</li>
+          <li>e</li>
+          <li>🎶</li>
+          <li>y</li>
+          <li>o</li>
+          <li>u</li>
+     </ul>
+</body>
+</html>
