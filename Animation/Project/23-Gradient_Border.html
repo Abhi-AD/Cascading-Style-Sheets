@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Gradient Border</title>
+     <style>
+          body{
+               margin: 0;
+               padding: 0;
+               background: #262626;
+          }
+          .box{
+               width: 400px;
+               height: 400px;
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%,-50%);
+               border: 7px solid transparent;
+               border-image: linear-gradient(45deg, #ffff00, #ff00ff, #ff0000, #0000ff, #00ff00);
+
+               border-image-slice: 1;
+               box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+          }
+     </style>
+</head>
+<body>
+     <div class="box"></div>
+</body>
+</html>
