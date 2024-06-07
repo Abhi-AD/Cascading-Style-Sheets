@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Baby Text</title>
+     <style>
+          body {
+               margin: 0;
+               padding: 0;
+               background: #262626;
+          }
+
+          .glowing {
+               display: flex;
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%, -50%);
+               text-transform: uppercase;
+          }
+          .glowing div{
+               margin-right: 2rem;
+          }
+
+          .glowing span {
+               color: #ffffff;
+               font-family: Verdana, Geneva, Tahoma, sans-serif;
+               font-size: 20px;
+               display: inline-block;
+               animation: animation 2s linear infinite;
+               width: 48px;
+               height: 48px;
+               text-align: center;
+               line-height: 48px;
+               border: 2px solid rgba(255, 255, 255, 0.4);
+               margin: 0 -0px;
+          }
+
+          @keyframes animation {
+               0% {
+                    color: #ff0000;
+                    box-shadow: 0 4px 20px rgba(255, 0, 0, 1);
+                    border: 2px solid rgba(255, 0, 0, 1);
+               }
+
+               33% {
+                    color: #ffff00;
+                    box-shadow: 0 4px 20px rgba(255, 0, 0, 1);
+                    border: 2px solid rgba(255, 255, 0, 1);
+               }
+
+               66% {
+                    color: #00ff00;
+                    box-shadow: 0 4px 20px rgba(0, 255, 0, 1);
+                    border: 2px solid rgba(0, 255, 0, 1);
+               }
+
+               100% {
+                    color: #ff0000;
+                    box-shadow: 0 4px 20px rgba(255, 0, 0, 1);
+                    border: 2px solid rgba(255, 0, 0, 1);
+               }
+          }
+
+          .glowing span:nth-child(1) {
+               animation-delay: 0s;
+          }
+
+          .glowing span:nth-child(2) {
+               animation-delay: 0.1s;
+          }
+
+          .glowing span:nth-child(4) {
+               animation-delay: 0.2s;
+          }
+
+          .glowing span:nth-child(5) {
+               animation-delay: 0.3s;
+          }
+
+          .glowing span:nth-child(6) {
+               animation-delay: 0.4s;
+          }
+
+          .glowing span:nth-child(7) {
+               animation-delay: 0.5s;
+          }
+
+          .glowing span:nth-child(8) {
+               animation-delay: 0.6s;
+          }
+     </style>
+</head>
+
+<body>
+     <div class="glowing">
+          <div>
+               <span>l</span>
+               <span>o</span>
+               <span>v</span>
+               <span>e</span>
+          </div>
+          <div>
+               <span>b</span>
+               <span>a</span>
+               <span>b</span>
+               <span>y</span>
+          </div>
+     </div>
+</body>
+
+</html>
