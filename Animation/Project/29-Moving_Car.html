@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Moving Car</title>
+     <style>
+          body {
+               margin: 0;
+               padding: 0;
+               overflow: hidden;
+          }
+
+          .bg {
+               position: relative;
+               background: #00fdff url(../img/Carbg.png);
+               height: 100vh;
+               background-size: cover;
+               background-position: 0 0;
+               background-repeat: repeat-x;
+               animation: moveBackground 15s linear infinite;
+          }
+          .car{
+               position: absolute;
+               bottom: 20px;
+               width: 800px;
+               left: 50px;
+          }
+
+          @keyframes moveBackground {
+               0% {
+                    background-position: 0 0;
+               }
+               100% {
+                    background-position: 100% 0;
+               }
+          }
+     </style>
+</head>
+
+<body>
+     <div class="bg">
+          <img src="../img/car.png" alt="car" class="car">
+     </div>
+</body>
+
+</html>
