@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Multiple Loader</title>
+     <style>
+          body { margin: 0; padding: 0; }
+          .loader span {
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%, -50%);
+               border: 6px solid #262626;
+               border-radius: 50%;
+               animation: 1s linear infinite;
+          }
+          span:nth-child(1) {
+               width: 20px; height: 20px;
+               border-bottom: 6px solid transparent;
+               animation-name: anim1;
+          }
+          span:nth-child(2) {
+               width: 60px; height: 60px;
+               border-left: 6px solid transparent;
+               animation-name: anim2;
+          }
+          span:nth-child(3) {
+               width: 100px; height: 100px;
+               border-top: 6px solid transparent;
+               animation-name: anim1;
+          }
+          span:nth-child(4) {
+               width: 140px; height: 140px;
+               border-right: 6px solid transparent;
+               animation-name: anim2;
+          }
+          @keyframes anim1 {
+               0% { transform: translate(-50%, -50%) rotate(0deg); }
+               100% { transform: translate(-50%, -50%) rotate(360deg); }
+          }
+          @keyframes anim2 {
+               0% { transform: translate(-50%, -50%) rotate(0deg); }
+               100% { transform: translate(-50%, -50%) rotate(-360deg); }
+          }
+     </style>
+</head>
+<body>
+     <div class="loader">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+     </div>
+</body>
+</html>
