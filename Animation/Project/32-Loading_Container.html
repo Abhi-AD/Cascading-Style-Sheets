@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Loading Container</title>
+     <style>
+          body {
+               margin: 0;
+               padding: 0;
+               font-family: Verdana, Geneva, Tahoma, sans-serif;
+          }
+
+          .loader {
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%, -50%);
+               width: 200px;
+               height: 200px;
+               font-size: 20px;
+               margin: 0;
+               padding: 0;
+               text-align: center;
+               line-height: 200px;
+               overflow: hidden;
+          }
+
+          .loader h2 {
+               color: #ffffff;
+               position: absolute;
+               margin: 0;
+               padding: 0;
+               z-index: 2;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%, -50%);
+          }
+
+          .loader:before {
+               content: '';
+               position: absolute;
+               top: 0;
+               width: 50%;
+               height: 150%;
+               background: #0060da;
+               animation: animation1 2s linear infinite;
+          }
+          .loader:after {
+               content: '';
+               position: absolute;
+               top: 0;
+               width: 50%;
+               height: 150%;
+               background: #e6005e;
+               animation: animation2 1s linear infinite;
+          }
+          @keyframes animation1 {
+               0%{
+                    transform: translateY(100%);
+                    left: 100%;
+               }
+               100%{
+                    transform: translateY(-100%);
+                    left: -50%;
+               }
+          }
+          @keyframes animation2 {
+               0%{
+                    transform: translateY(100%);
+                    left: -50%;
+               }
+               100%{
+                    transform: translateY(-100%);
+                    left: 100%;
+               }
+          }
+     </style>
+</head>
+
+<body>
+     <div class="loader">
+          <h2>Loading</h2>
+     </div>
+</body>
+
+</html>
