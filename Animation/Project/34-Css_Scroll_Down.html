@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Css Scroll Down</title>
+     <style>
+          body {
+               margin: 0;
+               padding: 0;
+               background: #262626;
+          }
+
+          .center {
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%, -50%);
+          }
+
+          .down {
+               position: relative;
+               width: 100px;
+               height: 160px;
+               border-radius: 100px;
+               background: transparent;
+               border: 8px solid #ffffff;
+               overflow: hidden;
+          }
+
+          .down:before {
+               content: '';
+               position: absolute;
+               width: 12px;
+               height: 12px;
+               border-radius: 50%;
+               background: #ffffff;
+               left: 50%;
+               top: 20px;
+               transform: translate(-50%, 0);
+               animation: animation 1s linear infinite;
+          }
+
+          .down:after {
+               content: '';
+               position: absolute;
+               width: 12px;
+               height: 30px;
+               border-radius: 50%;
+               background: #ffffff;
+               left: 50%;
+               top: 5px;
+               transform: translate(-50%, 0);
+               border-radius: 3px;
+          }
+
+          @keyframes animation {
+               0% {
+                    transform: translate(-50%, 20px);
+                    opacity: 0;
+               }
+
+               80% {
+                    transform: translate(-50%, 60px);
+               }
+
+               100% {
+                    transform: translate(-50%, 100px);
+               }
+          }
+     </style>
+</head>
+
+<body>
+     <div class="center">
+          <div class="down"></div>
+     </div>
+</body>
+
+</html>
