@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Text Animation</title>
+     <style>
+          body {
+               margin: 0;
+               padding: 0;
+               background: #28e4fd;
+          }
+
+          ul {
+               margin: 0;
+               padding: 0;
+               position: absolute;
+               top: 50%;
+               left: 10%;
+               transform: translate(0, -50%);
+          }
+
+          li {
+               list-style: none;
+               float: left;
+               color: transparent;
+               font-family: Verdana, Geneva, Tahoma, sans-serif;
+               font-size: 20rem;
+               position: relative;
+               font-weight: 900;
+          }
+
+          ul li:before,
+          ul li:after {
+               content: attr(data-title);
+               color: #242222;
+               position: absolute;
+               top: 0;
+               left: 0;
+               overflow: hidden;
+          }
+
+          ul li:nth-child(odd):before {
+               -webkit-clip-path: polygon(55% 0, 0 0, 0 100%, 35% 100%);
+               clip-path: polygon(55% 0, 0 0, 0 100%, 35% 100%);
+               top: -7px;
+               left: -2px;
+          }
+
+          ul li:nth-child(odd):after {
+               -webkit-clip-path: polygon(55% 0, 100% 0, 100% 100%, 35% 100%);
+               clip-path: polygon(55% 0, 100% 0, 100% 100%, 35% 100%);
+               top: 2px;
+               left: 2px;
+          }
+
+          ul li:nth-child(even):before {
+               -webkit-clip-path: polygon(25% 0, 0 0, 0 100%, 75% 100%);
+               clip-path: polygon(25% 0, 0 0, 0 100%, 75% 100%);
+               top: 10px;
+               left: -2px;
+          }
+
+          ul li:nth-child(even):after {
+               -webkit-clip-path: polygon(25% 0, 100% 0, 100% 100%, 75% 100%);
+               clip-path: polygon(25% 0, 100% 0, 100% 100%, 75% 100%);
+               top: 2px;
+               left: 2px;
+          }
+
+          ul li:nth-child(even) {
+               animation: animationEven 3s linear infinite;
+          }
+
+          ul li:nth-child(odd) {
+               animation: animationOdd 3s linear infinite;
+          }
+
+          @keyframes animationEven {
+               0% {
+                    transform: rotate(15deg);
+               }
+
+               25% {
+                    transform: rotate(0);
+               }
+
+               50% {
+                    transform: rotate(-15deg);
+               }
+
+               75% {
+                    transform: rotate(0);
+               }
+               100% {
+                    transform: rotate(15deg);
+               }
+          }
+          @keyframes animationOdd {
+               0% {
+                    transform: rotate(-15deg);
+               }
+
+               25% {
+                    transform: rotate(0);
+               }
+
+               50% {
+                    transform: rotate(15deg);
+               }
+
+               75% {
+                    transform: rotate(0);
+               }
+               100% {
+                    transform: rotate(-15deg);
+               }
+          }
+     </style>
+</head>
+
+<body>
+     <ul>
+          <li data-title="A">A</li>
+          <li data-title="B">B</li>
+          <li data-title="H">H</li>
+          <li data-title="I">I</li>
+          <li data-title="S">S</li>
+          <li data-title="H">H</li>
+          <li data-title="E">E</li>
+          <li data-title="K">K</li>
+     </ul>
+</body>
+
+</html>
