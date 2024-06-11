@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Animated Loader Ring</title>
+     <style>
+          body{
+               margin: 0;
+               padding: 0;
+               font-family: Verdana, Geneva, Tahoma, sans-serif;
+          }
+          .center{
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%,-50%);
+          }
+          .text{
+               width: 200px;
+               height: 200px;
+               border-radius: 50%;
+               color: #262626;
+               position: absolute;
+               top: 0;
+               left: 0;
+               text-transform: uppercase;
+               text-align: center;
+               line-height: 200px;
+               font-size: 2em;
+               background: transparent;
+               box-shadow: 0 0 5px rgba(0, 0, 0, 0.2) ;
+          }
+          .ring{
+               width: 200px;
+               height: 200px;
+               border-radius: 50%;
+               box-shadow: 0 4px 0 #262626;
+               background: transparent;
+               animation: animation 1s linear infinite;
+          }
+          @keyframes animation {
+               0%{transform: rotate(0deg);}
+               100%{transform: rotate(360deg);}
+          }
+     </style>
+</head>
+<body>
+     <div class="center">
+          <div class="text">loading</div>
+          <div class="ring"></div>
+     </div>
+</body>
+</html>
