@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Simple Loading</title>
+     <style>
+          body {
+               margin: 0;
+               padding: 0;
+               background: #141d35;
+          }
+          .circle{
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%,-50%);
+               width: 100px;
+               height: 100px;
+               border-radius: 50%;
+               border: 10px solid rgba(57, 192, 39, 0.1);
+               border-top: 10px solid #ffffff;
+               animation: animation 1.5s linear infinite;
+          }
+          @keyframes animation {
+               0%{transform: translate(-50%,-50%) rotate(0);}
+               100%{transform: translate(-50%,-50%) rotate(360deg);}
+          }
+     </style>
+</head>
+
+<body>
+     <div class="circle"></div>
+</body>
+
+</html>
