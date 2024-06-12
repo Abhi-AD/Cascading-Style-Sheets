@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Spinning Preloader</title>
+     <style>
+          body {
+               margin: 0;
+               padding: 0;
+          }
+
+          .center {
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%, -50%);
+          }
+
+          .large {
+               padding: 4rem;
+               border-top: 2px solid transparent;
+               border-right: 2px solid transparent;
+               border-bottom: 2px solid #262626;
+               border-left: 2px solid #262626;
+               border-radius: 50%;
+               animation: animationLarge 1s linear infinite;
+          }
+
+          .medium {
+               padding: 4rem;
+               border-top: 2px solid #262626;
+               border-right: 2px solid #262626;
+               border-bottom: 2px solid transparent;
+               border-left: 2px solid transparent;
+               border-radius: 50%;
+               animation: animationMedium 1s linear infinite;
+          }
+
+          .small {
+               padding: 4rem;
+               border-top: 2px solid transparent;
+               border-right: 2px solid transparent;
+               border-bottom: 2px solid #262626;
+               border-left: 2px solid #262626;
+               border-radius: 50%;
+               animation: animationSmall 1s linear infinite;
+          }
+
+          .dot {
+               width: 1rem;
+               height: 1rem;
+               background: #3f3f3f;
+               border-radius: 50%;
+          }
+          h1{
+               position: absolute;
+               left: -15%;
+               font-family: Verdana, Geneva, Tahoma, sans-serif;
+               font-size: 4rem;
+               text-transform: uppercase;
+          }
+
+          @keyframes animationLarge {
+               0% {
+                    transform: rotate(360deg);
+               }
+
+               100% {
+                    transform: rotate(0deg);
+               }
+          }
+
+          @keyframes animationMedium {
+               0% {
+                    transform: rotate(0deg);
+               }
+
+               100% {
+                    transform: rotate(720deg);
+               }
+          }
+
+          @keyframes animationSmall {
+               0% {
+                    transform: rotate(720deg);
+               }
+
+               100% {
+                    transform: rotate(0);
+               }
+          }
+     </style>
+</head>
+
+<body>
+     <div class="center">
+          <div class="large">
+               <div class="medium">
+                    <div class="small">
+                         <div class="dot"></div>
+                    </div>
+               </div>
+          </div>
+          <h1>loading</h1>
+     </div>
+</body>
+
+</html>
