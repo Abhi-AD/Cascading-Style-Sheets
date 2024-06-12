@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Font Awesome Animation</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <style>
+          body{
+               margin: 0;
+               padding: 0;
+               background: #2f2f2f;
+          }
+          .scene{
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%,-50%);
+               width: 400px;
+               height: 400px;
+               background: #3b93ff;
+               border: 20px solid #ffffff;
+               border-radius: 50%;
+               overflow: hidden;
+               box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+               animation:animationScene 5s linear infinite;
+          }
+          .scene:before{
+               content: '';
+               position: absolute;
+               top: 0;
+               left: 50%;
+               width: 100%;
+               height: 100%;
+               background: rgba(0, 0, 0, 0.3);
+               z-index: 1;
+          }
+          .fa-rocket{
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%,-50%) rotate(-45deg);
+               color: #ffffff;
+               font-size: 10rem !important;
+               text-shadow: -10px 15px 10px rgba(0, 0, 0, 0.2);
+               animation: animationRocket 0.2s linear infinite;
+          }
+          .cloud{
+               position: absolute;
+               color: #b6b5b5;
+               animation: animationCloud 1s linear infinite;
+          }
+          .cloud1{
+               left: 10%;
+               font-size: 3rem;
+          }
+          .cloud2{
+               left: 45%;
+               font-size: 1.5rem;
+               animation-delay: -0.8;
+          }
+          .cloud3{
+               right: 20%;
+               font-size: 3rem;
+               animation-delay: -0.4;
+          }
+          @keyframes animationRocket {
+               0%{  transform: translate(-50%,-50%) rotate(-45deg) translate(0,0);}
+               50%{  transform: translate(-50%,-50%) rotate(-45deg) translate(-5px,-5px);}
+               100%{  transform: translate(-50%,-50%) rotate(-45deg) translate(0,0);}
+          }
+          @keyframes animationCloud {
+               0%{  transform: translateY(-100%)}
+               100%{  transform: translateY(1000%);}
+          }
+          @keyframes animationScene{
+               0%{  background: #b339ff;}
+               30%{   background: #3b93ff;}
+               70%{   background: #3b93ff;}
+               100%{   background: #b339ff;}
+          }
+     </style>
+</head>
+<body>
+     <div class="scene">
+          <i class="fa fa-rocket" aria-hidden="true"></i>
+          <span class="cloud cloud1"><i class="fa fa-cloud" aria-hidden="true"></i></span>
+          <span class="cloud cloud2"><i class="fa fa-cloud" aria-hidden="true"></i></span>
+          <span class="cloud cloud3"><i class="fa fa-cloud" aria-hidden="true"></i></span>
+     </div>
+</body>
+</html>
