@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Scrolling Text</title>
+     <style>
+          body {
+               margin: 0;
+               padding: 0;
+          }
+
+          section {
+               width: 100%;
+               height: 100%;
+               background: #eaffae;
+               box-sizing: border-box;
+               overflow: hidden;
+               position: absolute;
+          }
+
+          .wrapper {
+               height: 100%;
+               width: 50%;
+               background: #f55757;
+               overflow: hidden;
+               color: #eaffae;
+               position: absolute;
+               top: 0;
+               left: 0;
+               border-right: 2px solid #262626;
+          }
+
+          .sliding {
+               text-transform: uppercase;
+               font-weight: 800;
+               position: absolute;
+               top: 50%;
+               white-space: nowrap;
+               font-size: 12em;
+               line-height: 220px;
+               overflow: hidden;
+               font-family: Arial, Helvetica, sans-serif;
+               animation: animation 20s linear infinite;
+          }
+
+          @keyframes animation {
+               0% {
+                    transform: translate(0, -50%);
+               }
+
+               100% {
+                    transform: translate(-50%, -50%);
+               }
+          }
+     </style>
+</head>
+
+<body>
+     <section>
+          <span class="sliding">
+               <span>Abhishek</span>
+               <span>Dangi</span>
+               <span>-</span>
+               <span>Abhishek</span>
+               <span>Dangi</span>
+          </span>
+          <div class="wrapper">
+               <span class="sliding">
+                    <span>Abhishek</span>
+                    <span>Dangi</span>
+                    <span>-</span>
+                    <span>Abhishek</span>
+                    <span>Dangi</span>
+               </span>
+          </div>
+     </section>
+</body>
+
+</html>
