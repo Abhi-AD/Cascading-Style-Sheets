@@ -1,6 +1,5 @@
 # CSS Project Readme
 
-
 ## Overview
 
 This project demonstrates various CSS techniques and practices. The purpose is to showcase the use of CSS for styling web pages, including layout, typography, animations, and responsiveness.
@@ -27,3 +26,4 @@ You will need a web browser to view the HTML and CSS files. No other tools are r
 1. Clone the repo
    ```sh
    https://github.com/Abhi-AD/Cascading-Style-Sheets
+   ```
