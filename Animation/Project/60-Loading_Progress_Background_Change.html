@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Loading Progress Background Change</title>
+     <style>
+          body {
+               margin: 0;
+               padding: 0;
+               animation: animationbg infinite 3s;
+          }
+
+          .container {
+               width: 50%;
+               background: #ffffff;
+               margin: 280px auto;
+               position: relative;
+               padding: 40px 80px;
+               border-radius: 4px;
+               box-sizing: border-box;
+               box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+          }
+
+          .loading {
+               position: relative;
+               display: inline-block;
+               width: 100%;
+               height: 25px;
+               background: #f1f1f1;
+               box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+               border-radius: 4px;
+               overflow: hidden;
+          }
+
+          .loading:after {
+               content: '';
+               position: absolute;
+               left: 0;
+               width: 0%;
+               height: 100%;
+               border-radius: 4px;
+               box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+               animation: animation infinite 3s;
+          }
+
+          @keyframes animation {
+               0% {
+                    width: 0%;
+                    background: #2980B9;
+               }
+
+               10% {
+                    width: 10%;
+                    background: #6D4C41;
+               }
+
+               20% {
+                    width: 20%;
+                    background: #F1C40F;
+               }
+
+               30% {
+                    width: 30%;
+                    background: #283593;
+               }
+
+               40% {
+                    width: 40%;
+                    background: #2C3E50;
+               }
+
+               50% {
+                    width: 50%;
+                    background: #880E4F;
+               }
+
+               60% {
+                    width: 60%;
+                    background: #7E735F;
+               }
+
+               70% {
+                    width: 70%;
+                    background: #F1C40F;
+               }
+
+               80% {
+                    width: 80%;
+                    background: #FF0084;
+               }
+
+               90% {
+                    width: 90%;
+                    background: #68768A;
+               }
+
+               100% {
+                    width: 100%;
+                    background: #038387;
+               }
+          }
+
+          @keyframes animationbg {
+               0% {
+                    background: #2980B9;
+               }
+
+               10% {
+                    background: #6D4C41;
+               }
+
+               20% {
+                    background: #F1C40F;
+               }
+
+               30% {
+                    background: #283593;
+               }
+
+               40% {
+                    background: #2C3E50;
+               }
+
+               50% {
+                    background: #880E4F;
+               }
+
+               60% {
+                    background: #7E735F;
+               }
+
+               70% {
+                    background: #F1C40F;
+               }
+
+               80% {
+                    background: #FF0084;
+               }
+
+               90% {
+                    background: #68768A;
+               }
+
+               100% {
+                    background: #038387;
+               }
+          }
+     </style>
+</head>
+
+<body>
+     <div class="container">
+          <div class="loading"></div>
+     </div>
+</body>
+
+</html>
