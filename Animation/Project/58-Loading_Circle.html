@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Loading Circle Animation</title>
+     <style>
+          body {
+               background: #262626;
+               margin: 0;
+               padding: 0;
+          }
+
+          .loader {
+               height: 80px;
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               transform: translateX(-50%) translateY(-50%);
+          }
+
+          .loader span {
+               height: 25px;
+               width: 25px;
+               display: inline-block;
+               border-radius: 50%;
+               transition: all 0.5s;
+               animation: animation 2s infinite;
+          }
+
+          .loader span:nth-child(1) {
+               animation-delay: 0s;
+          }
+
+          .loader span:nth-child(2) {
+               animation-delay: 0.2s;
+          }
+
+          .loader span:nth-child(3) {
+               animation-delay: 0.4s;
+          }
+
+          .loader span:nth-child(4) {
+               animation-delay: 0.6s;
+          }
+
+          .loader span:nth-child(5) {
+               animation-delay: 0.8s;
+          }
+
+          .loader span:nth-child(6) {
+               animation-delay: 1s;
+          }
+
+          .loader span:nth-child(7) {
+               animation-delay: 1.2s;
+          }
+
+          .loader h1 {
+               text-transform: capitalize;
+               font-family: Arial, Helvetica, sans-serif;
+               color: #ffffff;
+               margin: 0;
+               padding: 0;
+          }
+
+          @keyframes animation {
+               0% {
+                    border: 1px solid #ffffff;
+                    background: transparent;
+                    transform: translateY(0);
+               }
+
+               50% {
+                    border: 1px solid #ffffff;
+                    background: rgb(255, 0, 0);
+                    transform: translateY(-25px);
+               }
+
+               100% {
+                    border: 1px solid #ffffff;
+                    background: rgb(255, 255, 0);
+                    transform: translateY(0);
+               }
+          }
+     </style>
+</head>
+
+<body>
+     <div class="container loader">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <h1>loading</h1>
+     </div>
+</body>
+
+</html>
