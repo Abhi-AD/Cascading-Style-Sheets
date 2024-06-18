@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title> Floating Text Loading Effect</title>
+     <style>
+          body {
+               margin: 0;
+               padding: 0;
+               font-family: Arial, Helvetica, sans-serif;
+          }
+
+          ul {
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%, -50%);
+               margin: 0;
+               padding: 0;
+          }
+
+          ul li {
+               text-transform: uppercase;
+               list-style: none;
+               float: left;
+               background: #ff85ef;
+               padding: 15px 20px;
+               font-size: 20px;
+               border-radius: 1rem;
+               margin: 10px;
+               color: #ffffff;
+               animation: animation 1s infinite alternate;
+               -webkit-perspective: 500px;
+          }
+
+          @keyframes animation {
+               from {
+                    transform: scale(1) translateY(0) rotateY(0deg);
+                    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+               }
+
+               to {
+                    transform: scale(1.35) translateY(-25px) rotateY(45deg);
+                    box-shadow: 0 30px 5px rgba(0, 0, 0, 0.1);
+               }
+          }
+
+          ul li:nth-child(1) {
+               animation-delay: 0s;
+          }
+
+          ul li:nth-child(2) {
+               animation-delay: 0.2s;
+          }
+
+          ul li:nth-child(3) {
+               animation-delay: 0.4s;
+          }
+
+          ul li:nth-child(4) {
+               animation-delay: 0.6s;
+          }
+
+          ul li:nth-child(5) {
+               animation-delay: 0.8s;
+          }
+
+          ul li:nth-child(6) {
+               animation-delay: 1s;
+          }
+     </style>
+</head>
+
+<body>
+     <ul>
+          <li>l</li>
+          <li>o</li>
+          <li>d</li>
+          <li>i</li>
+          <li>n</li>
+          <li>g</li>
+     </ul>
+</body>
+
+</html>
