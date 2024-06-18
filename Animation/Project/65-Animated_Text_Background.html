@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Animated Text Background</title>
+     <style>
+          body {
+               margin: 0;
+               padding: 0;
+               background: #004e4a;
+          }
+
+          h1 {
+               text-align: center;
+               margin-top: 350px;
+               font-family: Arial, Helvetica, sans-serif;
+               font-size: 11em;
+               line-height: 1em;
+               text-transform: uppercase;
+               background: url(../img/Animated_Text_Bg.png);
+               -webkit-background-clip: text;
+               -webkit-text-fill-color: transparent;
+               animation: animation 10s linear infinite;
+          }
+
+          @keyframes animation {
+               0% {
+                    background-position: 0 0;
+               }
+
+               100% {
+                    background-position: 100% 100%;
+               }
+          }
+     </style>
+</head>
+
+<body>
+     <h1>i love you baby</h1>
+</body>
+
+</html>
