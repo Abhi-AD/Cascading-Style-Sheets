@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Box Shadow Animation</title>
+     <style>
+          body {
+               margin: 0;
+               padding: 0;
+          }
+
+          .center {
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%, -50%);
+          }
+
+          .circle {
+               position: absolute;
+               width: 90px;
+               height: 90px;
+               background: transparent;
+               border-radius: 50%;
+               box-shadow:
+                    90px 90px 0 #2ecc71,
+                    -90px 90px 0 #e67e22,
+                    90px -90px 0 #e74c3c,
+                    -90px -90px 0 #f1c40f,
+                    0 -135px 0 #9b59b6,
+                    0 135px 0 #2c3e50,
+                    135px 0 0 #f39c12,
+                    -135px 0 0 #1abc9c;
+               animation: animation 5s infinite;
+          }
+
+          @keyframes animation {
+               0% {
+                    box-shadow: 0 0 0 #2ecc71,
+                         0 0 0 #e67e22,
+                         0 0 0 #e74c3c,
+                         0 0 0 #f1c40f,
+                         0 0 0 #9b59b6,
+                         0 0 0 #2c3e50,
+                         0 0 0 #f39c12,
+                         0 0 0 #1abc9c;
+                    ;
+                    transform: rotate(0);
+               }
+
+               25% {
+                    box-shadow:
+                         90px 90px 0 #2ecc71,
+                         -90px 90px 0 #e67e22,
+                         90px -90px 0 #e74c3c,
+                         -90px -90px 0 #f1c40f,
+                         0 -135px 0 #9b59b6,
+                         0 135px 0 #2c3e50,
+                         135px 0 0 #f39c12,
+                         -135px 0 0 #1abc9c;
+                    transform: rotate(360deg);
+
+               }
+
+               50% {
+                    box-shadow: 0 0 0 #2ecc71,
+                         0 0 0 #e67e22,
+                         0 0 0 #e74c3c,
+                         0 0 0 #f1c40f,
+                         0 0 0 #9b59b6,
+                         0 0 0 #2c3e50,
+                         0 0 0 #f39c12,
+                         0 0 0 #1abc9c;
+                    transform: rotate(720deg);
+               }
+
+               75% {
+                    box-shadow:
+                         90px 90px 0 #2ecc71,
+                         -90px 90px 0 #e67e22,
+                         90px -90px 0 #e74c3c,
+                         -90px -90px 0 #f1c40f,
+                         0 -135px 0 #9b59b6,
+                         0 135px 0 #2c3e50,
+                         135px 0 0 #f39c12,
+                         -135px 0 0 #1abc9c;
+                    transform: rotate(1440deg);
+               }
+
+               100% {
+                    box-shadow: 0 0 0 #2ecc71,
+                         0 0 0 #e67e22,
+                         0 0 0 #e74c3c,
+                         0 0 0 #f1c40f,
+                         0 0 0 #9b59b6,
+                         0 0 0 #2c3e50,
+                         0 0 0 #f39c12,
+                         0 0 0 #1abc9c;
+                    transform: rotate(2880deg);
+
+               }
+
+          }
+     </style>
+</head>
+
+<body>
+     <div class="center">
+          <div class="circle"></div>
+     </div>
+</body>
+
+</html>
