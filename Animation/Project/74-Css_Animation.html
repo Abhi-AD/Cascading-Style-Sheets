@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Css Animation</title>
+     <style>
+          body {
+               background: #262626;
+               margin: 0;
+               padding: 0;
+          }
+
+          .container {
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%, -50%);
+          }
+
+          .square {
+               width: 100px;
+               height: 100px;
+               background: #ffffff;
+               padding: 20px;
+               box-sizing: border-box;
+               animation: square 2s infinite;
+
+          }
+
+          .circle {
+               width: 50%;
+               height: 50%;
+               background: #262626;
+               animation: circle 2s infinite;
+          }
+
+          @keyframes square {
+               0% {
+                    transform: rotate(0deg) scale(1) translateX(0);
+                    border-radius: 0;
+                    background: #ffffff;
+               }
+
+               25% {
+                    transform: rotate(360deg) scale(0.5) translateX(50px);
+                    border-radius: 50%;
+                    background: #ff0000;
+               }
+
+               50% {
+                    transform: rotate(360deg) scale(0.5)translateX(0);
+                    border-radius: 50%;
+                    background: #ff0000;
+               }
+
+               75% {
+                    transform: rotate(360deg) scale(0.5) translateX(-50px);
+                    border-radius: 50%;
+                    background: #ff0000;
+               }
+
+               100% {
+                    transform: rotate(720deg) scale(1) translateX(0);
+                    border-radius: 50%;
+                    background: #ffffff;
+               }
+          }
+
+          @keyframes circle {
+               0% {
+                    transform: rotate(0deg) scale(0.5) translateY(0);
+                    border-radius: 50%;
+                    background: #ff0000;
+               }
+
+               50% {
+                    transform: rotate(-720deg) scale(1.5)translateY(50px);
+                    border-radius: 0%;
+                    background: #ff0000;
+               }
+
+               100% {
+                    transform: rotate(-1440deg) scale(0.5) translateY(0);
+                    border-radius: 50%;
+                    background: #ff0000;
+               }
+          }
+     </style>
+</head>
+
+<body>
+     <div class="container">
+          <div class="square">
+               <div class="circle"></div>
+          </div>
+     </div>
+</body>
+
+</html>
