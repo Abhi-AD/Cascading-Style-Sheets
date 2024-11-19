@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heart with Typing Effect</title>
+    <style>
+      body {
+        background: #3c4bce;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: "Arial", sans-serif;
+        color: white;
+      }
+
+      .heart {
+        width: 180px;
+        height: 100px;
+        position: absolute;
+        top: 40%;
+        left: 35%;
+        background: #ff3e3e;
+        transition: 1s;
+        transform-origin: right bottom;
+      }
+
+      .heart:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #ffffff;
+        transition: 2s;
+        transform-origin: right bottom;
+      }
+
+      .heart:hover {
+        transform: rotate(45deg);
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+      }
+
+      .heart:hover:before {
+        background: #ff3e3e;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+        transform: rotate(450deg) translateY(100px);
+      }
+
+      h1 {
+        position: absolute;
+        bottom: 40%;
+        left: 40%;
+        font-size: 32px;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 3px solid white;
+        animation: typing 4s steps(30, end),
+          blink 0.5s step-end infinite alternate;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 300px;
+        }
+      }
+
+      @keyframes blink {
+        from {
+          border-color: transparent;
+        }
+        to {
+          border-color: white;
+        }
+      }
+      h1.typing-complete {
+        overflow: visible;
+        border-right: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="heart"></div>
+    <h1 id="animated-text">I Love You, Baby</h1>
+
+    <script>
+      const h1Element = document.getElementById("animated-text");
+      setTimeout(() => {
+        h1Element.classList.add("typing-complete");
+      }, 4000);
+    </script>
+  </body>
+</html>
