@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading Page Animation</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #f4f4f4;
+      }
+
+      .loading {
+        position: relative;
+        width: 300px;
+        height: 50px;
+        background: #affd5b;
+        border: 2px solid #262626;
+        overflow: hidden;
+        transform: skewX(-20deg);
+      }
+
+      h1 {
+        margin: 0;
+        padding: 0;
+        color: #262626;
+        text-align: center;
+        line-height: 50px;
+        text-transform: uppercase;
+        font-family: sans-serif;
+        letter-spacing: 15px;
+        position: relative;
+        z-index: 2;
+      }
+
+      .loading::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, #ffffff, #0e5cb6, #ffffff);
+        border-left: 2px solid #262626;
+        border-right: 2px solid #262626;
+        z-index: 1;
+        animation: sliding 2s linear infinite, pulse 2s ease-in-out infinite;
+      }
+
+      @keyframes sliding {
+        0% {
+          transform: translateX(-100%);
+        }
+        50% {
+          transform: translateX(50%);
+        }
+        100% {
+          transform: translateX(100%);
+        }
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loading">
+      <h1>Loading</h1>
+    </div>
+  </body>
+</html>
