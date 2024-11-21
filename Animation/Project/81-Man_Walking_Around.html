@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Man Walking Around</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        animation: mainBackground 15s linear infinite;
+      }
+
+      .circle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 720px;
+        height: 720px;
+        animation: rotateGlobal 25s linear infinite;
+      }
+
+      .circle img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .girl {
+        width: 50%;
+        height: 2px;
+        background: transparent;
+        position: absolute;
+        top: calc(50% - 1px);
+        transform-origin: right;
+        animation: rotateGirl 10s linear infinite;
+      }
+
+      .girl img {
+        width: 100px;
+        height: 100px;
+        transform: rotate(-90deg) translateY(100px);
+      }
+
+      @keyframes rotateGlobal {
+        0% {
+          transform: translate(-50%, -50%) rotate(0deg);
+        }
+        100% {
+          transform: translate(-50%, -50%) rotate(-360deg);
+        }
+      }
+
+      @keyframes rotateGirl {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes mainBackground {
+        0%,
+        10%,
+        90%,
+        100% {
+          background: #ffffff;
+        }
+        50% {
+          background: #00523f;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="circle">
+      <img src="../img/global.png" alt="Rotating Globe" />
+      <div class="girl">
+        <img src="../img/wakinggirl.gif" alt="Walking Girl" />
+      </div>
+    </div>
+  </body>
+</html>
